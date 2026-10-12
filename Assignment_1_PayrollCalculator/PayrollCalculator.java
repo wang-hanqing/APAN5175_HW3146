@@ -1,3 +1,5 @@
+//Author: Hanqing Wang (hw3146)
+
 import java.util.Scanner;
 
 public class PayrollCalculator {
@@ -32,10 +34,12 @@ public class PayrollCalculator {
             System.out.print("Enter hourly wage: ");
             if (scanner.hasNextDouble()) {
                 hourlyWage = scanner.nextDouble();
-                if (hourlyWage <= 0) {
-                    System.out.println("Hourly wage must be greater than 0. Please try again.");
-                }
-            } else {
+                // Reject NaN, Infinity, and non-positive values
+                if (Double.isNaN(hourlyWage) || Double.isInfinite(hourlyWage) || hourlyWage <= 0) {
+                System.out.println("Hourly wage must be a valid number greater than 0. Please try again.");
+                hourlyWage = 0; // reset so the loop asks again
+    }
+} else {
                 System.out.println("Invalid input. Please enter a number (e.g., 25.50).");
                 scanner.next(); // discard the invalid input
             }
