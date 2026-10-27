@@ -14,7 +14,7 @@ public class TemperatureConverter {
     private static final double ABSOLUTE_ZERO_F = -459.67;
     private static final double ABSOLUTE_ZERO_K = 0.0;
 
-    // [2] Core conversion methods (return type: double, see [4])
+    // Core conversion methods (return type: double, see [4])
     /** 
     * Converts a Celsius temperature to the target scale.
     *
@@ -119,7 +119,7 @@ public class TemperatureConverter {
         }
     }
     
-    // [3] Pass-by-value demonstration
+    // Pass-by-value demonstration
 
     /**
      * Helper for the pass-by-value demo: tries to change its parameter.
@@ -156,7 +156,7 @@ public class TemperatureConverter {
         System.out.println("Converted readings (new array):          " + Arrays.toString(kelvinReadings));
     }
 
-    // [5] Method overloading: convertMultiple
+    // Method overloading: convertMultiple
     /**
      * Converts multiple temperatures to one target scale in a single call.
      * Returns a NEW array, so the caller's original array is left unchanged.
@@ -188,7 +188,7 @@ public class TemperatureConverter {
         }
     }
 
-    // [6] Input validation
+    // Input validation
 
     /**
     * Checks whether the given scale is supported (C, F, or K, case-insensitive).
@@ -275,7 +275,7 @@ public class TemperatureConverter {
         return value;
     }
     
-    // [7] Structured output formatting
+    // Structured output formatting
     /**
      * Formats a temperature for display: rounds to 2 decimal places and
      * drops the decimal part for whole numbers (77.0 -> "77", 26.850000000000023 -> "26.85").
@@ -351,7 +351,7 @@ public class TemperatureConverter {
             + formatTemperature(secondResult) + unitSymbol(secondTarget));
     }
 
-    // [9] Program entry point and test cases
+    // Program entry point and test cases
 
     /**
      * Test: both versions of the overloaded convertMultiple method.
